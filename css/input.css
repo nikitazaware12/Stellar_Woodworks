@@ -1,0 +1,318 @@
+@import "tailwindcss";
+
+/* Scan the HTML and JS for class names */
+@source "../index.html";
+@source "../js/main.js";
+
+/* ---------- Design tokens (edit here to re-theme) ---------- */
+@theme {
+  --color-cream: #faf6ef;
+  --color-warm: #fdfbf7;
+  --color-beige: #ece3d3;
+  --color-sand: #d9ccb4;
+  --color-wood: #8a5a36;
+  --color-wood-dark: #6b4426;
+  --color-charcoal: #26231f;
+  --color-ink: #4a453e;
+  --color-accent: #6f7d54;
+  --color-accent-dark: #5a6644;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+  body {
+    background: var(--color-warm);
+    color: var(--color-charcoal);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+  img {
+    background: var(--color-beige);
+  }
+}
+
+/* ---------- Components ---------- */
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 lg:px-8;
+  }
+  .section-y {
+    @apply py-20 lg:py-28;
+  }
+  .eyebrow {
+    @apply mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent;
+  }
+  .heading {
+    @apply font-display text-4xl font-semibold leading-tight sm:text-5xl;
+  }
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-medium tracking-wide transition-all duration-300;
+  }
+  .btn-primary {
+    @apply bg-accent text-white hover:-translate-y-0.5 hover:bg-accent-dark hover:shadow-lg;
+  }
+  .btn-outline {
+    @apply border border-charcoal/30 text-charcoal hover:bg-charcoal hover:text-white;
+  }
+  .btn-light {
+    @apply border border-white/70 text-white hover:bg-white hover:text-charcoal;
+  }
+  .nav-link {
+    @apply relative rounded-full px-3.5 py-2 text-sm text-ink transition-colors hover:text-accent;
+  }
+  .nav-link.is-active {
+    @apply font-semibold text-accent;
+  }
+  .img-cover {
+    @apply h-full w-full object-cover;
+  }
+  .zoom {
+    @apply transition-transform duration-700 ease-out group-hover:scale-110;
+  }
+  .field {
+    @apply w-full rounded-lg border border-sand bg-white px-3.5 py-2 text-sm outline-none transition-colors focus:border-accent;
+  }
+  .contact-card {
+    @apply flex items-center gap-4 rounded-xl border border-sand/70 bg-white px-4 py-3 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:shadow-lg;
+  }
+  .contact-icon {
+    @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-accent transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-white;
+  }
+  .field.has-error {
+    @apply border-red-600;
+  }
+}
+
+/* ---------- Scroll reveal + hero entrance ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-d1 { transition-delay: 90ms; }
+.reveal-d2 { transition-delay: 180ms; }
+.reveal-d3 { transition-delay: 270ms; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes slow-zoom {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+.rise { animation: rise 0.9s ease both; }
+.rise-d1 { animation-delay: 120ms; }
+.rise-d2 { animation-delay: 240ms; }
+.rise-d3 { animation-delay: 360ms; }
+.rise-d4 { animation-delay: 480ms; }
+.hero-zoom { animation: slow-zoom 8s ease-out both; }
+
+/* ---------- Works filter animation ---------- */
+.work-item { transition: opacity 0.4s ease, transform 0.4s ease; }
+.work-item.is-hidden { display: none; }
+.work-item.is-entering { opacity: 0; transform: scale(0.96); }
+
+/* ---------- Modal ---------- */
+.modal { @apply fixed inset-0 z-[60] hidden items-center justify-center bg-charcoal/85 p-4; }
+.modal.is-open { @apply flex; }
+body.no-scroll { overflow: hidden; }
+
+/* ---------- Mobile menu ---------- */
+.mobile-panel { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.mobile-panel.is-open { max-height: calc(100vh - 4rem); overflow-y: auto; }
+
+/* ---------- Header sizing ---------- */
+.header-bar { height: 5rem; transition: height 0.3s ease; }
+.is-compact .header-bar { height: 4rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .rise { opacity: 1; transform: none; transition: none; animation: none; }
+  .hero-zoom { animation: none; }
+}
+
+
+/* ---------- Architecture-inspired hero collage ---------- */
+.hero-section { isolation: isolate; }
+.hero-slides { overflow: hidden; background: #26231f; }
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-image);
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(1.045);
+  transition: opacity 1.35s ease, transform 7s ease;
+}
+.hero-slide.is-active { opacity: 1; transform: scale(1); }
+.hero-slide-1 { --hero-image: url('../images/contemporary-living-room.avif'); }
+.hero-slide-2 { --hero-image: url('../images/designer-interior-furniture.avif'); }
+.hero-slide-3 { --hero-image: url('../images/warm-living-room-interior.avif'); }
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(24,22,19,.86) 0%, rgba(24,22,19,.72) 43%, rgba(24,22,19,.32) 72%, rgba(24,22,19,.35) 100%);
+}
+.hero-layout { position: relative; }
+.hero-collage {
+  position: relative;
+  min-height: 430px;
+  max-width: 650px;
+  width: 100%;
+  margin-inline: auto;
+}
+.hero-image {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.35);
+  background: #d9ccb4;
+  box-shadow: 0 24px 65px rgba(0,0,0,.25);
+  isolation: isolate;
+}
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 48%, rgba(0,0,0,.62));
+  opacity: .75;
+  transition: opacity .45s ease;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .6s ease;
+}
+.hero-image:hover img, .hero-image:focus-visible img { transform: scale(1.09); filter: saturate(1.08); }
+.hero-image:hover::after { opacity: .95; }
+.hero-image-main {
+  left: 12%;
+  top: 5%;
+  width: 68%;
+  height: 78%;
+  border-radius: 190px 190px 5px 5px;
+}
+.hero-image-top {
+  z-index: 2;
+  right: 0;
+  top: 0;
+  width: 31%;
+  height: 34%;
+  border-radius: 3px;
+}
+.hero-image-bottom {
+  z-index: 2;
+  right: 1%;
+  bottom: 3%;
+  width: 40%;
+  height: 42%;
+  border-radius: 3px;
+}
+.hero-image-caption {
+  position: absolute;
+  z-index: 2;
+  left: 24px;
+  right: 20px;
+  bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #fff;
+}
+.hero-image-caption span { font-size: 10px; text-transform: uppercase; letter-spacing: .22em; color: rgba(255,255,255,.78); }
+.hero-image-caption b { font-family: var(--font-display); font-size: clamp(20px, 2vw, 30px); font-weight: 500; line-height: 1.1; }
+.hero-image-tag {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  color: #26231f;
+  background: rgba(253,251,247,.92);
+  font-size: 10px;
+  letter-spacing: .06em;
+}
+.hero-image-tag span { font-size: 16px; transition: transform .3s ease; }
+.hero-image-top:hover .hero-image-tag span { transform: translate(3px,-3px); }
+.hero-note {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  bottom: 1%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  color: #26231f;
+  background: #faf6ef;
+  box-shadow: 0 15px 40px rgba(0,0,0,.2);
+}
+.hero-note-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; color: #faf6ef; background: #6f7d54; font-size: 20px; }
+.hero-note strong, .hero-note small { display: block; }
+.hero-note strong { font-family: var(--font-display); font-size: 18px; font-weight: 600; line-height: 1.1; }
+.hero-note small { margin-top: 4px; color: #6a6258; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.hero-check { display: inline-grid; place-items: center; width: 18px; height: 18px; border: 1px solid rgba(217,204,180,.8); border-radius: 50%; color: #d9ccb4; font-size: 10px; }
+.hero-scroll-line { display: inline-block; width: 40px; height: 1px; background: rgba(255,255,255,.7); }
+@media (min-width: 1024px) {
+  .hero-collage { min-height: 540px; }
+  .hero-image-main { left: 8%; width: 69%; height: 83%; }
+  .hero-note { left: -1%; bottom: 0; }
+}
+@media (max-width: 1023px) {
+  .hero-section { min-height: auto; }
+  .hero-overlay { background: linear-gradient(180deg, rgba(24,22,19,.84), rgba(24,22,19,.72)); }
+  .hero-collage { min-height: 410px; margin-top: 10px; }
+  .hero-image-main { left: 10%; width: 65%; }
+  .hero-image-top { right: 1%; width: 30%; }
+  .hero-image-bottom { right: 2%; width: 39%; }
+  .hero-note { left: 0; }
+}
+@media (max-width: 560px) {
+  .hero-collage { min-height: 335px; }
+  .hero-image-main { left: 5%; top: 5%; width: 72%; height: 78%; border-radius: 120px 120px 4px 4px; }
+  .hero-image-top { width: 34%; height: 30%; }
+  .hero-image-bottom { width: 43%; height: 38%; right: 0; }
+  .hero-image-caption { left: 14px; bottom: 15px; }
+  .hero-image-caption span { font-size: 8px; }
+  .hero-image-caption b { font-size: 20px; }
+  .hero-image-tag { top: 7px; left: 7px; right: 7px; padding: 7px; font-size: 8px; }
+  .hero-note { bottom: -1%; padding: 10px 12px; gap: 8px; }
+  .hero-note-mark { width: 30px; height: 30px; font-size: 17px; }
+  .hero-note strong { font-size: 15px; }
+  .hero-note small { font-size: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide, .hero-image img, .hero-image-tag span { transition: none; }
+}
+
+/* Compact spacing refinement: preserve existing sections and interactions. */
+@layer components {
+  .section-y { @apply py-14 lg:py-18; }
+  .map-frame { min-height: 220px; }
+}
+@media (max-width: 639px) {
+  .hero-layout { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+}

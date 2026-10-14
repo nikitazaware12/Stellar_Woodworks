@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stellar Woodworks creates thoughtfully designed bespoke furniture manufacturing and interior solutions for homes, offices and commercial spaces in Pune.">
+  <title>Stellar Woodworks | Custom Furniture & Interiors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2">Skip to content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-warm/85 backdrop-blur transition-shadow duration-300">
+  <div class="container-x header-bar flex items-center justify-between gap-4">
+    <a href="#home" class="flex items-center gap-3" aria-label="Stellar Woodworks home">
+      <span class="flex h-10 w-10 items-center justify-center rounded-md bg-charcoal font-display text-2xl font-bold text-cream">F</span>
+      <span class="leading-tight">
+        <span class="block font-display text-xl font-semibold">Stellar Woodworks</span>
+        <span class="block text-[10px] uppercase tracking-[0.25em] text-ink">Furniture Manufacturing</span>
+      </span>
+    </a>
+
+    <nav aria-label="Main" class="hidden items-center gap-1 xl:flex">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#about">About Us</a>
+      <a class="nav-link" href="#services">Our Services</a>
+      <a class="nav-link" href="#works">Our Works</a>
+      <a class="nav-link" href="#featured">Featured Projects</a>
+      <a class="nav-link" href="#products">Products</a>
+      <a class="nav-link" href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#contact" class="btn btn-primary hidden sm:inline-flex">Get a Quote</a>
+      <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-panel" aria-label="Open menu"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-charcoal/20 xl:hidden">
+        <svg id="icon-open" viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current stroke-[1.7]" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg id="icon-close" viewBox="0 0 24 24" class="hidden h-6 w-6 fill-none stroke-current stroke-[1.7]" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-panel" class="mobile-panel border-t border-sand bg-warm xl:hidden">
+    <nav aria-label="Mobile" class="container-x pb-6 pt-2">
+      <a class="mobile-link block border-b border-beige py-3.5" href="#home">Home</a>
+      <a class="mobile-link block border-b border-beige py-3.5" href="#about">About Us</a>
+      <a class="mobile-link block border-b border-beige py-3.5" href="#services">Our Services</a>
+      <a class="mobile-link block border-b border-beige py-3.5" href="#works">Our Works</a>
+      <a class="mobile-link block border-b border-beige py-3.5" href="#featured">Featured Projects</a>
+      <a class="mobile-link block border-b border-beige py-3.5" href="#products">Products</a>
+      <a class="mobile-link block border-b border-beige py-3.5" href="#contact">Contact Us</a>
+      <a href="#contact" class="mobile-link btn btn-primary mt-5 w-full">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="hero-section relative isolate flex min-h-[700px] items-center overflow-hidden bg-charcoal pt-24 text-white lg:min-h-screen">
+  <!-- Rotating full-bleed interior backgrounds -->
+  <div class="hero-slides absolute inset-0 -z-20" aria-hidden="true">
+    <div class="hero-slide hero-slide-1 is-active"></div>
+    <div class="hero-slide hero-slide-2"></div>
+    <div class="hero-slide hero-slide-3"></div>
+  </div>
+  <div class="hero-overlay absolute inset-0 -z-10"></div>
+
+  <div class="container-x hero-layout grid items-center gap-14 py-16 lg:grid-cols-12 lg:gap-8 lg:py-24">
+    <div class="relative z-10 lg:col-span-6 xl:col-span-6">
+      <p class="rise eyebrow !text-sand">Furniture • Interiors • Craftsmanship</p>
+      <h1 class="rise rise-d1 font-display text-5xl font-semibold leading-[1.02] sm:text-6xl xl:text-7xl">
+        Thoughtfully Made.<br><span class="text-sand">Beautifully Lived.</span>
+      </h1>
+      <p class="rise rise-d2 mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
+        Bespoke furniture, considered materials and exceptional craftsmanship — made to bring warmth, character and lasting quality to every space.
+      </p>
+      <div class="rise rise-d3 mt-9 flex flex-col gap-3 sm:flex-row">
+        <a href="#works" class="btn btn-primary">Explore Our Work
+          <svg viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-light">Discuss Your Project</a>
+      </div>
+      <div class="rise rise-d4 mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-white/80">
+        <span class="flex items-center gap-2"><span class="hero-check">✓</span>Made to measure</span>
+        <span class="flex items-center gap-2"><span class="hero-check">✓</span>Premium materials</span>
+        <span class="flex items-center gap-2"><span class="hero-check">✓</span>Built to last</span>
+      </div>
+    </div>
+
+    <!-- Hoverable architectural-style image collage -->
+    <div class="hero-collage rise rise-d3 lg:col-span-6 xl:col-span-6" aria-label="Furniture and interior inspiration">
+      <a class="hero-image hero-image-main" href="#works" aria-label="Explore contemporary living room furniture">
+        <img src="images/contemporary-living-room.avif" alt="Warm contemporary living room with carefully selected furniture" fetchpriority="high">
+        <span class="hero-image-caption"><span>01 / Living spaces</span><b>Comfort, with character</b></span>
+      </a>
+      <a class="hero-image hero-image-top" href="#products" aria-label="Explore designer furniture">
+        <img src="images/luxury-residence-interior.avif" alt="Elegant interior with modern furniture" loading="eager">
+        <span class="hero-image-tag">Made for your space <span>↗</span></span>
+      </a>
+      <a class="hero-image hero-image-bottom" href="#services" aria-label="Explore wood and furniture craftsmanship">
+        <img src="images/warm-living-room-interior.avif" alt="Natural wood furniture and refined interior details" loading="eager">
+      </a>
+      <div class="hero-note"><span class="hero-note-mark">✳</span><span><strong>Designed around you</strong><small>Crafted with purpose</small></span></div>
+    </div>
+  </div>
+
+  <div class="hero-bottom-bar absolute bottom-0 left-0 right-0 hidden items-center justify-between border-t border-white/20 px-8 py-4 text-[10px] uppercase tracking-[0.25em] text-white/70 lg:flex">
+    <span>Custom furniture manufacturing</span>
+    <span class="flex items-center gap-3"><i class="hero-scroll-line"></i>Scroll to explore</span>
+    <span>Made with intention · Made to last</span>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section-y bg-warm">
+  <div class="container-x grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+    <div class="reveal relative mx-auto w-full max-w-[380px]">
+      <div class="aspect-[4/5] overflow-hidden rounded-2xl">
+        <img src="images/woodworking-craftsmanship.avif" alt="Woodworking tools and craftsmanship" class="img-cover" loading="lazy">
+      </div>
+      <div class="absolute -bottom-6 right-0 hidden aspect-square w-2/5 overflow-hidden rounded-2xl border-8 border-warm shadow-xl sm:block">
+        <img src="images/wooden-accent-chair.avif" alt="Finished timber furniture in a bedroom" class="img-cover" loading="lazy">
+      </div>
+    </div>
+
+    <div class="reveal reveal-d1">
+      <p class="eyebrow">About Us</p>
+      <h2 class="heading">Furniture made with care, built to last</h2>
+      <p class="mt-5 leading-relaxed text-ink">
+        Stellar Woodworks designs and manufactures custom furniture for homes, offices and commercial spaces, from the first sketch to final installation.
+      </p>
+      <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+        <li class="flex items-center gap-3 rounded-lg bg-cream px-4 py-3 text-sm font-medium"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent text-xs text-white">&#10003;</span>Custom manufacturing</li>
+        <li class="flex items-center gap-3 rounded-lg bg-cream px-4 py-3 text-sm font-medium"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent text-xs text-white">&#10003;</span>Premium materials</li>
+        <li class="flex items-center gap-3 rounded-lg bg-cream px-4 py-3 text-sm font-medium"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent text-xs text-white">&#10003;</span>Skilled craftsmanship</li>
+        <li class="flex items-center gap-3 rounded-lg bg-cream px-4 py-3 text-sm font-medium"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent text-xs text-white">&#10003;</span>Timely delivery</li>
+      </ul>
+      <a href="#process" class="btn btn-primary mt-9">Discover Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="section-y bg-cream">
+  <div class="container-x">
+    <div class="reveal mx-auto mb-8 max-w-2xl text-center">
+      <p class="eyebrow">Our Services</p>
+      <h2 class="heading">What we make for you</h2>
+      <p class="mt-4 leading-relaxed text-ink">From single custom pieces to large production runs, we cover the full range of furniture manufacturing.</p>
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <article class="reveal group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="images/custom-woodwork-detail.jfif" alt="Custom furniture in a styled room" class="img-cover zoom" loading="lazy">
+        </div>
+        <div class="flex flex-1 flex-col p-4">
+          <h3 class="font-display text-xl font-semibold leading-tight">Custom Furniture Manufacturing</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-ink">Made-to-measure pieces built from your drawings or our design support.</p>
+          <a href="#contact" class="mt-auto inline-flex items-center gap-1.5 pt-3 text-sm font-medium text-accent transition-all group-hover:gap-3">Learn More <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="reveal reveal-d1 group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="images/residential-living-room.avif" alt="Residential living room furniture" class="img-cover zoom" loading="lazy">
+        </div>
+        <div class="flex flex-1 flex-col p-4">
+          <h3 class="font-display text-xl font-semibold leading-tight">Residential Furniture</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-ink">Sofas, beds, dining sets and storage for comfortable family homes.</p>
+          <a href="#contact" class="mt-auto inline-flex items-center gap-1.5 pt-3 text-sm font-medium text-accent transition-all group-hover:gap-3">Learn More <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="reveal reveal-d2 group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="images/boutique-hotel-furniture.avif" alt="Commercial lounge seating" class="img-cover zoom" loading="lazy">
+        </div>
+        <div class="flex flex-1 flex-col p-4">
+          <h3 class="font-display text-xl font-semibold leading-tight">Commercial Furniture</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-ink">Durable seating and fixtures for hotels, restaurants and retail spaces.</p>
+          <a href="#contact" class="mt-auto inline-flex items-center gap-1.5 pt-3 text-sm font-medium text-accent transition-all group-hover:gap-3">Learn More <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="reveal reveal-d3 group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="images/office-desks-and-chairs.avif" alt="Modern office with desks and chairs" class="img-cover zoom" loading="lazy">
+        </div>
+        <div class="flex flex-1 flex-col p-4">
+          <h3 class="font-display text-xl font-semibold leading-tight">Office Furniture</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-ink">Workstations, executive desks and meeting tables for productive offices.</p>
+          <a href="#contact" class="mt-auto inline-flex items-center gap-1.5 pt-3 text-sm font-medium text-accent transition-all group-hover:gap-3">Learn More <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="reveal group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="images/modular-kitchen-cabinetry.avif" alt="Modular kitchen cabinetry" class="img-cover zoom" loading="lazy">
+        </div>
+        <div class="flex flex-1 flex-col p-4">
+          <h3 class="font-display text-xl font-semibold leading-tight">Modular Furniture</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-ink">Flexible, space-saving systems that adapt as your needs change.</p>
+          <a href="#contact" class="mt-auto inline-flex items-center gap-1.5 pt-3 text-sm font-medium text-accent transition-all group-hover:gap-3">Learn More <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="reveal reveal-d1 group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="images/solid-wood-furniture.avif" alt="Solid wooden furniture" class="img-cover zoom" loading="lazy">
+        </div>
+        <div class="flex flex-1 flex-col p-4">
+          <h3 class="font-display text-xl font-semibold leading-tight">Wooden Furniture</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-ink">Solid and engineered wood pieces with refined joinery and finishing.</p>
+          <a href="#contact" class="mt-auto inline-flex items-center gap-1.5 pt-3 text-sm font-medium text-accent transition-all group-hover:gap-3">Learn More <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="reveal reveal-d2 group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="images/wardrobes-and-storage.avif" alt="Interior with built-in furniture" class="img-cover zoom" loading="lazy">
+        </div>
+        <div class="flex flex-1 flex-col p-4">
+          <h3 class="font-display text-xl font-semibold leading-tight">Interior Furniture Solutions</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-ink">Wardrobes, cabinetry and built-ins planned around the whole room.</p>
+          <a href="#contact" class="mt-auto inline-flex items-center gap-1.5 pt-3 text-sm font-medium text-accent transition-all group-hover:gap-3">Learn More <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="reveal reveal-d3 group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="aspect-[16/10] overflow-hidden">
+          <img src="images/office-workstations.avif" alt="Office workstations for bulk orders" class="img-cover zoom" loading="lazy">
+        </div>
+        <div class="flex flex-1 flex-col p-4">
+          <h3 class="font-display text-xl font-semibold leading-tight">Bulk Furniture Production</h3>
+          <p class="mt-1.5 text-sm leading-relaxed text-ink">Consistent quality across large orders for developers and institutions.</p>
+          <a href="#contact" class="mt-auto inline-flex items-center gap-1.5 pt-3 text-sm font-medium text-accent transition-all group-hover:gap-3">Learn More <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OUR WORKS ===================== -->
+<section id="works" class="section-y bg-warm">
+  <div class="container-x">
+    <div class="reveal mx-auto mb-10 max-w-2xl text-center">
+      <p class="eyebrow">Our Works</p>
+      <h2 class="heading">Pieces we have built</h2>
+      <p class="mt-4 leading-relaxed text-ink">Browse by category to see the range of furniture we manufacture. Sample entries: replace with your own completed work.</p>
+    </div>
+
+    <div id="work-filters" role="group" aria-label="Filter works by category" class="mb-10 flex flex-wrap justify-center gap-2">
+      <button type="button" data-filter="all" aria-pressed="true" class="filter-btn min-h-11 rounded-full border border-charcoal bg-charcoal px-5 text-sm text-white transition-colors">All</button>
+      <button type="button" data-filter="Residential" aria-pressed="false" class="filter-btn min-h-11 rounded-full border border-sand px-5 text-sm text-ink transition-colors hover:border-charcoal hover:text-charcoal">Residential</button>
+      <button type="button" data-filter="Office" aria-pressed="false" class="filter-btn min-h-11 rounded-full border border-sand px-5 text-sm text-ink transition-colors hover:border-charcoal hover:text-charcoal">Office</button>
+      <button type="button" data-filter="Custom Furniture" aria-pressed="false" class="filter-btn min-h-11 rounded-full border border-sand px-5 text-sm text-ink transition-colors hover:border-charcoal hover:text-charcoal">Custom Furniture</button>
+      <button type="button" data-filter="Wooden Furniture" aria-pressed="false" class="filter-btn min-h-11 rounded-full border border-sand px-5 text-sm text-ink transition-colors hover:border-charcoal hover:text-charcoal">Wooden Furniture</button>
+      <button type="button" data-filter="Commercial" aria-pressed="false" class="filter-btn min-h-11 rounded-full border border-sand px-5 text-sm text-ink transition-colors hover:border-charcoal hover:text-charcoal">Commercial Projects</button>
+    </div>
+
+    <div id="work-grid" class="grid auto-rows-[240px] grid-flow-dense gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left sm:row-span-2" data-category="Residential" data-title="Living Room Collection" data-text="Sofa and storage set in a warm, neutral palette." data-image="images/sofas-and-seating.avif">
+        <img src="images/sofas-and-seating.avif" alt="Living room sofa and storage set" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Residential</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Living Room Collection</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Sofa and storage set in a warm, neutral palette.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left sm:col-span-2" data-category="Office" data-title="Open Plan Workstations" data-text="Modular desks designed for collaborative teams." data-image="images/office-workstations.avif">
+        <img src="images/office-workstations.avif" alt="Open plan office workstations" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Office</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Open Plan Workstations</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Modular desks designed for collaborative teams.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left" data-category="Custom Furniture" data-title="Bespoke Wall Unit" data-text="Built-in shelving fitted to an awkward alcove." data-image="images/custom-furniture-workshop-03.jfif">
+        <img src="images/custom-furniture-workshop-03.jfif" alt="Bespoke built-in shelving unit" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Custom Furniture</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Bespoke Wall Unit</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Built-in shelving fitted to an awkward alcove.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left" data-category="Wooden Furniture" data-title="Solid Wood Dining Table" data-text="Hand-finished tabletop with visible grain." data-image="images/dining-table-and-chairs.avif">
+        <img src="images/dining-table-and-chairs.avif" alt="Solid wood dining table with chairs" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Wooden Furniture</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Solid Wood Dining Table</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Hand-finished tabletop with visible grain.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left sm:row-span-2" data-category="Commercial" data-title="Lounge Seating" data-text="Hard-wearing seating for a hospitality lounge." data-image="images/boutique-hotel-furniture.avif">
+        <img src="images/boutique-hotel-furniture.avif" alt="Hospitality lounge seating" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Commercial</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Lounge Seating</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Hard-wearing seating for a hospitality lounge.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left" data-category="Residential" data-title="Master Bedroom Set" data-text="Bed frame and bedside units in matching veneer." data-image="images/bedroom-furniture.avif">
+        <img src="images/bedroom-furniture.avif" alt="Master bedroom furniture set" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Residential</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Master Bedroom Set</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Bed frame and bedside units in matching veneer.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left" data-category="Office" data-title="Executive Desk" data-text="Statement desk with integrated cable management." data-image="images/office-desks-and-chairs.avif">
+        <img src="images/office-desks-and-chairs.avif" alt="Executive desk and chairs" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Office</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Executive Desk</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Statement desk with integrated cable management.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left sm:col-span-2" data-category="Custom Furniture" data-title="Walk-in Wardrobe" data-text="Full-height wardrobes with tailored interiors." data-image="images/wardrobes-and-storage.avif">
+        <img src="images/wardrobes-and-storage.avif" alt="Custom wardrobe and storage" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Custom Furniture</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Walk-in Wardrobe</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Full-height wardrobes with tailored interiors.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left" data-category="Wooden Furniture" data-title="Accent Chair Range" data-text="Timber frame chairs with upholstered seats." data-image="images/wooden-accent-chair.avif">
+        <img src="images/wooden-accent-chair.avif" alt="Timber accent furniture" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Wooden Furniture</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Accent Chair Range</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Timber frame chairs with upholstered seats.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left" data-category="Commercial" data-title="Reception Counter" data-text="Branded reception desk for a corporate lobby." data-image="images/elegant-modern-interior.avif">
+        <img src="images/elegant-modern-interior.avif" alt="Modern reception and lounge interior" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Commercial</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Reception Counter</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Branded reception desk for a corporate lobby.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+
+      <button type="button" class="work-item project-card group relative block overflow-hidden rounded-xl text-left sm:col-span-2 lg:col-span-1" data-category="Residential" data-title="Designer Living Space" data-text="Sofa, side tables and decor planned as one coordinated set." data-image="images/designer-interior-furniture.avif">
+        <img src="images/designer-interior-furniture.avif" alt="Designer living room furniture" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent opacity-90 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"></span>
+        <span class="absolute inset-x-0 bottom-0 block p-5 text-white transition-transform duration-300 sm:translate-y-4 sm:group-hover:translate-y-0">
+          <span class="block text-[11px] uppercase tracking-[0.2em] text-white/70">Residential</span>
+          <span class="block font-display text-2xl font-semibold leading-tight">Designer Living Space</span>
+          <span class="mt-1 block text-sm text-white/80 sm:opacity-0 sm:transition-opacity sm:group-hover:opacity-100">Sofa, side tables and decor planned as one coordinated set.</span>
+          <span class="mt-3 inline-block rounded-full bg-white px-4 py-1.5 text-xs font-medium text-charcoal">View Project</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURED PROJECTS ===================== -->
+<section id="featured" class="section-y bg-beige">
+  <div class="container-x">
+    <div class="reveal mx-auto mb-10 max-w-2xl text-center">
+      <p class="eyebrow">Featured Projects</p>
+      <h2 class="heading">Selected commissions</h2>
+      <p class="mt-4 leading-relaxed text-ink">A closer look at larger projects, from private residences to hotels and offices. A selection of furniture and interior projects across residential and commercial spaces.</p>
+    </div>
+
+    <div class="grid gap-x-8 gap-y-10 lg:grid-cols-12">
+      <article class="reveal lg:col-span-8">
+        <button type="button" class="project-card group block w-full text-left" data-title="Luxury Residence Interiors" data-category="Luxury Residential" data-location="Pune, Maharashtra" data-text="A complete furniture package for a private residence: living, dining and bedroom pieces finished in natural oak and soft textiles." data-image="images/luxury-residence-interior.avif">
+          <span class="relative block aspect-[16/10] overflow-hidden rounded-2xl lg:aspect-auto lg:h-[420px]">
+            <img src="images/luxury-residence-interior.avif" alt="Luxury residence living room interior" class="img-cover zoom" loading="lazy">
+            <span class="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl text-charcoal sm:translate-y-3 sm:opacity-0 sm:transition-all sm:duration-300 sm:group-hover:translate-y-0 sm:group-hover:opacity-100" aria-hidden="true">&nearr;</span>
+          </span>
+          <span class="mt-3 block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">Luxury Residential <span class="text-ink/60">&middot; Pune, Maharashtra</span></span>
+          <span class="mt-1 block font-display text-2xl font-semibold leading-tight">Luxury Residence Interiors</span>
+          <span class="mt-1.5 block max-w-xl text-sm leading-relaxed text-ink">A complete furniture package for a private residence, finished in natural oak and soft textiles.</span>
+        </button>
+      </article>
+      <article class="reveal reveal-d1 lg:col-span-4">
+        <button type="button" class="project-card group block w-full text-left" data-title="Executive Office Suite" data-category="Executive Office" data-location="Pune, Maharashtra" data-text="Desks, credenzas and boardroom tables for a corporate headquarters." data-image="images/office-desks-and-chairs.avif">
+          <span class="relative block aspect-[16/10] overflow-hidden rounded-2xl lg:aspect-auto lg:h-[420px]">
+            <img src="images/office-desks-and-chairs.avif" alt="Executive office suite furniture" class="img-cover zoom" loading="lazy">
+            <span class="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl text-charcoal sm:translate-y-3 sm:opacity-0 sm:transition-all sm:duration-300 sm:group-hover:translate-y-0 sm:group-hover:opacity-100" aria-hidden="true">&nearr;</span>
+          </span>
+          <span class="mt-3 block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">Executive Office <span class="text-ink/60">&middot; Pune, Maharashtra</span></span>
+          <span class="mt-1 block font-display text-2xl font-semibold leading-tight">Executive Office Suite</span>
+          <span class="mt-1.5 block max-w-xl text-sm leading-relaxed text-ink">Desks, credenzas and boardroom tables for a corporate headquarters.</span>
+        </button>
+      </article>
+      <article class="reveal lg:col-span-5">
+        <button type="button" class="project-card group block w-full text-left" data-title="Custom Wooden Collection" data-category="Custom Wooden" data-location="Pune, Maharashtra" data-text="One-off timber pieces designed with the client and built in our workshop." data-image="images/custom-woodwork-detail.jfif">
+          <span class="relative block aspect-[16/10] overflow-hidden rounded-2xl lg:aspect-auto lg:h-[340px]">
+            <img src="images/custom-woodwork-detail.jfif" alt="Custom wooden furniture collection" class="img-cover zoom" loading="lazy">
+            <span class="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl text-charcoal sm:translate-y-3 sm:opacity-0 sm:transition-all sm:duration-300 sm:group-hover:translate-y-0 sm:group-hover:opacity-100" aria-hidden="true">&nearr;</span>
+          </span>
+          <span class="mt-3 block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">Custom Wooden <span class="text-ink/60">&middot; Pune, Maharashtra</span></span>
+          <span class="mt-1 block font-display text-2xl font-semibold leading-tight">Custom Wooden Collection</span>
+          <span class="mt-1.5 block max-w-xl text-sm leading-relaxed text-ink">One-off timber pieces designed with the client and built in our workshop.</span>
+        </button>
+      </article>
+      <article class="reveal reveal-d1 lg:col-span-7">
+        <button type="button" class="project-card group block w-full text-left" data-title="Boutique Hotel Furnishing" data-category="Hotel" data-location="Pune, Maharashtra" data-text="Guest room and lobby furniture produced as a coordinated batch." data-image="images/boutique-hotel-furniture.avif">
+          <span class="relative block aspect-[16/10] overflow-hidden rounded-2xl lg:aspect-auto lg:h-[340px]">
+            <img src="images/boutique-hotel-furniture.avif" alt="Boutique hotel lobby furniture" class="img-cover zoom" loading="lazy">
+            <span class="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl text-charcoal sm:translate-y-3 sm:opacity-0 sm:transition-all sm:duration-300 sm:group-hover:translate-y-0 sm:group-hover:opacity-100" aria-hidden="true">&nearr;</span>
+          </span>
+          <span class="mt-3 block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">Hotel <span class="text-ink/60">&middot; Pune, Maharashtra</span></span>
+          <span class="mt-1 block font-display text-2xl font-semibold leading-tight">Boutique Hotel Furnishing</span>
+          <span class="mt-1.5 block max-w-xl text-sm leading-relaxed text-ink">Guest room and lobby furniture produced as a coordinated batch.</span>
+        </button>
+      </article>
+      <article class="reveal lg:col-span-6">
+        <button type="button" class="project-card group block w-full text-left" data-title="Restaurant &amp; Retail Fit-out" data-category="Commercial" data-location="Pune, Maharashtra" data-text="Durable tables, banquette seating and display units for a busy venue." data-image="images/dining-room-furniture-detail.avif">
+          <span class="relative block aspect-[16/10] overflow-hidden rounded-2xl lg:aspect-auto lg:h-[340px]">
+            <img src="images/dining-room-furniture-detail.avif" alt="Restaurant and retail furniture fit-out" class="img-cover zoom" loading="lazy">
+            <span class="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl text-charcoal sm:translate-y-3 sm:opacity-0 sm:transition-all sm:duration-300 sm:group-hover:translate-y-0 sm:group-hover:opacity-100" aria-hidden="true">&nearr;</span>
+          </span>
+          <span class="mt-3 block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">Commercial <span class="text-ink/60">&middot; Pune, Maharashtra</span></span>
+          <span class="mt-1 block font-display text-2xl font-semibold leading-tight">Restaurant &amp; Retail Fit-out</span>
+          <span class="mt-1.5 block max-w-xl text-sm leading-relaxed text-ink">Durable tables, banquette seating and display units for a busy venue.</span>
+        </button>
+      </article>
+      <article class="reveal reveal-d1 lg:col-span-6">
+        <button type="button" class="project-card group block w-full text-left" data-title="Modular Kitchen Cabinetry" data-category="Residential" data-location="Pune, Maharashtra" data-text="Made-to-measure kitchen cabinets and storage planned around the way you cook." data-image="images/modular-kitchen-cabinetry.avif">
+          <span class="relative block aspect-[16/10] overflow-hidden rounded-2xl lg:aspect-auto lg:h-[340px]">
+            <img src="images/modular-kitchen-cabinetry.avif" alt="Modular kitchen cabinetry" class="img-cover zoom" loading="lazy">
+            <span class="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl text-charcoal sm:translate-y-3 sm:opacity-0 sm:transition-all sm:duration-300 sm:group-hover:translate-y-0 sm:group-hover:opacity-100" aria-hidden="true">&nearr;</span>
+          </span>
+          <span class="mt-3 block text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">Residential <span class="text-ink/60">&middot; Pune, Maharashtra</span></span>
+          <span class="mt-1 block font-display text-2xl font-semibold leading-tight">Modular Kitchen Cabinetry</span>
+          <span class="mt-1.5 block max-w-xl text-sm leading-relaxed text-ink">Made-to-measure kitchen cabinets and storage planned around the way you cook.</span>
+        </button>
+      </article>
+    </div>
+
+    <div class="reveal mt-16 text-center">
+      <a href="#works" class="btn btn-outline">View All Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section id="process" class="section-y bg-charcoal text-white">
+  <div class="container-x">
+    <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+      <p class="eyebrow">Manufacturing Process</p>
+      <h2 class="heading">From idea to installation</h2>
+      <p class="mt-4 leading-relaxed text-white/70">A clear, step-by-step process so you always know where your project stands.</p>
+    </div>
+    <ol class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <li class="reveal group border-t border-white/20 pt-6 transition-colors duration-300 hover:border-sand">
+        <span class="font-display text-5xl font-semibold text-sand transition-transform duration-300 group-hover:translate-x-2">01</span>
+        <h3 class="mt-3 font-display text-2xl font-semibold">Consultation &amp; Requirements</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/70">We listen to your needs, space, budget and timeline.</p>
+      </li>
+      <li class="reveal reveal-d1 group border-t border-white/20 pt-6 transition-colors duration-300 hover:border-sand">
+        <span class="font-display text-5xl font-semibold text-sand transition-transform duration-300 group-hover:translate-x-2">02</span>
+        <h3 class="mt-3 font-display text-2xl font-semibold">Design &amp; Planning</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/70">Drawings and specifications are prepared for your approval.</p>
+      </li>
+      <li class="reveal reveal-d2 group border-t border-white/20 pt-6 transition-colors duration-300 hover:border-sand">
+        <span class="font-display text-5xl font-semibold text-sand transition-transform duration-300 group-hover:translate-x-2">03</span>
+        <h3 class="mt-3 font-display text-2xl font-semibold">Material Selection</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/70">Choose woods, boards, fabrics and finishes that suit the brief.</p>
+      </li>
+      <li class="reveal group border-t border-white/20 pt-6 transition-colors duration-300 hover:border-sand">
+        <span class="font-display text-5xl font-semibold text-sand transition-transform duration-300 group-hover:translate-x-2">04</span>
+        <h3 class="mt-3 font-display text-2xl font-semibold">Manufacturing &amp; Craftsmanship</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/70">Skilled makers cut, join and finish each piece in our workshop.</p>
+      </li>
+      <li class="reveal reveal-d1 group border-t border-white/20 pt-6 transition-colors duration-300 hover:border-sand">
+        <span class="font-display text-5xl font-semibold text-sand transition-transform duration-300 group-hover:translate-x-2">05</span>
+        <h3 class="mt-3 font-display text-2xl font-semibold">Quality Inspection</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/70">Every item is checked for fit, finish and durability.</p>
+      </li>
+      <li class="reveal reveal-d2 group border-t border-white/20 pt-6 transition-colors duration-300 hover:border-sand">
+        <span class="font-display text-5xl font-semibold text-sand transition-transform duration-300 group-hover:translate-x-2">06</span>
+        <h3 class="mt-3 font-display text-2xl font-semibold">Delivery &amp; Installation</h3>
+        <p class="mt-2 text-sm leading-relaxed text-white/70">Careful transport and on-site installation by our team.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section id="why" class="section-y bg-warm">
+  <div class="container-x">
+    <div class="reveal mx-auto mb-12 max-w-2xl text-center">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2 class="heading">What sets our work apart</h2>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <div class="reveal group rounded-2xl border border-sand/70 bg-cream p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white hover:shadow-xl">
+        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.6-.6-2.6z"/></svg>
+        </span>
+        <h3 class="mt-5 font-display text-2xl font-semibold">Experienced Craftsmanship</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink">Skilled makers who care about every joint and edge.</p>
+      </div>
+
+      <div class="reveal reveal-d1 group rounded-2xl border border-sand/70 bg-cream p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white hover:shadow-xl">
+        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-9 5-14 15-14 0 10-5 15-14 15M5 19l7-7"/></svg>
+        </span>
+        <h3 class="mt-5 font-display text-2xl font-semibold">Premium-Quality Materials</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink">Carefully sourced woods, boards and hardware.</p>
+      </div>
+
+      <div class="reveal reveal-d2 group rounded-2xl border border-sand/70 bg-cream p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white hover:shadow-xl">
+        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 17 3l4 4L7 21zM8 12l2 2M11 9l2 2M14 6l2 2"/></svg>
+        </span>
+        <h3 class="mt-5 font-display text-2xl font-semibold">Custom Design Solutions</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink">Pieces shaped around your space and requirements.</p>
+      </div>
+
+      <div class="reveal group rounded-2xl border border-sand/70 bg-cream p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white hover:shadow-xl">
+        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM8.5 12l2.5 2.5 4.5-5"/></svg>
+        </span>
+        <h3 class="mt-5 font-display text-2xl font-semibold">Quality Assurance</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink">Checks at each stage before anything leaves the workshop.</p>
+      </div>
+
+      <div class="reveal reveal-d1 group rounded-2xl border border-sand/70 bg-cream p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white hover:shadow-xl">
+        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h11v10H2zM13 10h4l4 3v3h-8zM6 19a2 2 0 1 0 0-.01M17 19a2 2 0 1 0 0-.01"/></svg>
+        </span>
+        <h3 class="mt-5 font-display text-2xl font-semibold">Reliable Delivery</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink">Clear schedules and careful handling to site.</p>
+      </div>
+
+      <div class="reveal reveal-d2 group rounded-2xl border border-sand/70 bg-cream p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-white hover:shadow-xl">
+        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8zM7.5 7.5h.01"/></svg>
+        </span>
+        <h3 class="mt-5 font-display text-2xl font-semibold">Competitive Manufacturing Solutions</h3>
+        <p class="mt-2 text-sm leading-relaxed text-ink">Direct production keeps pricing fair and transparent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCTS ===================== -->
+<section id="products" class="section-y bg-cream">
+  <div class="container-x">
+    <div class="reveal mx-auto mb-12 max-w-2xl text-center">
+      <p class="eyebrow">Products</p>
+      <h2 class="heading">Our furniture range</h2>
+      <p class="mt-4 leading-relaxed text-ink">Standard ranges can be adapted in size, material and finish.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-6">
+      <a href="#contact" class="reveal group relative block aspect-[4/5] overflow-hidden rounded-xl sm:aspect-[4/3]">
+        <img src="images/sofas-and-seating.avif" alt="Sofa and seating" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/75 to-transparent"></span>
+        <span class="absolute inset-x-4 bottom-4 flex items-end justify-between text-white"><span class="font-display text-xl font-semibold sm:text-2xl">Sofas &amp; Seating</span><span class="hidden text-xl transition-transform group-hover:translate-x-1 sm:block" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="#contact" class="reveal reveal-d1 group relative block aspect-[4/5] overflow-hidden rounded-xl sm:aspect-[4/3]">
+        <img src="images/dining-table-and-chairs.avif" alt="Dining tables and chairs" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/75 to-transparent"></span>
+        <span class="absolute inset-x-4 bottom-4 flex items-end justify-between text-white"><span class="font-display text-xl font-semibold sm:text-2xl">Dining Tables &amp; Chairs</span><span class="hidden text-xl transition-transform group-hover:translate-x-1 sm:block" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="#contact" class="reveal reveal-d2 group relative block aspect-[4/5] overflow-hidden rounded-xl sm:aspect-[4/3]">
+        <img src="images/bedroom-furniture.avif" alt="Beds and bedroom furniture" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/75 to-transparent"></span>
+        <span class="absolute inset-x-4 bottom-4 flex items-end justify-between text-white"><span class="font-display text-xl font-semibold sm:text-2xl">Beds &amp; Bedroom</span><span class="hidden text-xl transition-transform group-hover:translate-x-1 sm:block" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="#contact" class="reveal group relative block aspect-[4/5] overflow-hidden rounded-xl sm:aspect-[4/3]">
+        <img src="images/wardrobes-and-storage.avif" alt="Wardrobes and storage" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/75 to-transparent"></span>
+        <span class="absolute inset-x-4 bottom-4 flex items-end justify-between text-white"><span class="font-display text-xl font-semibold sm:text-2xl">Wardrobes &amp; Storage</span><span class="hidden text-xl transition-transform group-hover:translate-x-1 sm:block" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="#contact" class="reveal reveal-d1 group relative block aspect-[4/5] overflow-hidden rounded-xl sm:aspect-[4/3]">
+        <img src="images/office-desks-and-chairs.avif" alt="Office desks and chairs" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/75 to-transparent"></span>
+        <span class="absolute inset-x-4 bottom-4 flex items-end justify-between text-white"><span class="font-display text-xl font-semibold sm:text-2xl">Office Desks &amp; Chairs</span><span class="hidden text-xl transition-transform group-hover:translate-x-1 sm:block" aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="#contact" class="reveal reveal-d2 group relative block aspect-[4/5] overflow-hidden rounded-xl sm:aspect-[4/3]">
+        <img src="images/modular-kitchen-cabinetry.avif" alt="Kitchen cabinetry" class="img-cover zoom" loading="lazy">
+        <span class="absolute inset-0 bg-gradient-to-t from-charcoal/75 to-transparent"></span>
+        <span class="absolute inset-x-4 bottom-4 flex items-end justify-between text-white"><span class="font-display text-xl font-semibold sm:text-2xl">Kitchen &amp; Cabinetry</span><span class="hidden text-xl transition-transform group-hover:translate-x-1 sm:block" aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section id="gallery" class="section-y bg-warm">
+  <div class="container-x">
+    <div class="reveal mx-auto mb-12 max-w-2xl text-center">
+      <p class="eyebrow">Gallery</p>
+      <h2 class="heading">Styles, materials and finishes</h2>
+      <p class="mt-4 leading-relaxed text-ink">Click any image to view it larger.</p>
+    </div>
+    <div class="columns-2 gap-4 lg:columns-4">
+      <button type="button" class="gallery-item reveal group mb-4 block aspect-[3/4] w-full break-inside-avoid overflow-hidden rounded-xl" data-full="images/living-room-sofa.avif" data-alt="Green velvet sofa in a bright room"><img src="images/living-room-sofa.avif" alt="Green velvet sofa in a bright room" class="img-cover zoom" loading="lazy"></button>
+      <button type="button" class="gallery-item reveal reveal-d1 group mb-4 block aspect-square w-full break-inside-avoid overflow-hidden rounded-xl" data-full="images/custom-woodwork-detail.jfif" data-alt="Carved wooden swing seat and decor"><img src="images/custom-woodwork-detail.jfif" alt="Carved wooden swing seat and decor" class="img-cover zoom" loading="lazy"></button>
+      <button type="button" class="gallery-item reveal reveal-d2 group mb-4 block aspect-[4/5] w-full break-inside-avoid overflow-hidden rounded-xl" data-full="images/residential-living-room.avif" data-alt="Grey tufted sofa in a bright living room"><img src="images/residential-living-room.avif" alt="Grey tufted sofa in a bright living room" class="img-cover zoom" loading="lazy"></button>
+      <button type="button" class="gallery-item reveal reveal-d3 group mb-4 block aspect-[3/4] w-full break-inside-avoid overflow-hidden rounded-xl" data-full="images/modern-furniture-detail-01.jfif" data-alt="Classic carved sofa and chairs"><img src="images/modern-furniture-detail-01.jfif" alt="Classic carved sofa and chairs" class="img-cover zoom" loading="lazy"></button>
+      <button type="button" class="gallery-item reveal group mb-4 block aspect-square w-full break-inside-avoid overflow-hidden rounded-xl" data-full="images/woodworking-craftsmanship.avif" data-alt="Workshop tools close-up"><img src="images/woodworking-craftsmanship.avif" alt="Workshop tools close-up" class="img-cover zoom" loading="lazy"></button>
+      <button type="button" class="gallery-item reveal reveal-d1 group mb-4 block aspect-[4/5] w-full break-inside-avoid overflow-hidden rounded-xl" data-full="images/furnished-interior-space.avif" data-alt="Furnished interior with kitchen and lounge"><img src="images/furnished-interior-space.avif" alt="Furnished interior with kitchen and lounge" class="img-cover zoom" loading="lazy"></button>
+      <button type="button" class="gallery-item reveal reveal-d2 group mb-4 block aspect-[3/4] w-full break-inside-avoid overflow-hidden rounded-xl" data-full="images/elegant-modern-interior.avif" data-alt="Contemporary interior with dining table"><img src="images/elegant-modern-interior.avif" alt="Contemporary interior with dining table" class="img-cover zoom" loading="lazy"></button>
+      <button type="button" class="gallery-item reveal reveal-d3 group mb-4 block aspect-square w-full break-inside-avoid overflow-hidden rounded-xl" data-full="images/modern-furniture-detail-02.jfif" data-alt="Carved wooden table and console"><img src="images/modern-furniture-detail-02.jfif" alt="Carved wooden table and console" class="img-cover zoom" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section id="testimonials" class="section-y bg-beige">
+  <div class="container-x">
+    <div class="reveal mx-auto mb-12 max-w-2xl text-center">
+      <p class="eyebrow">Client Testimonials</p>
+      <h2 class="heading">What clients say</h2>
+      <p class="mt-4 leading-relaxed text-ink">Craftsmanship, thoughtful design and a smooth project experience — the values behind every piece we make.</p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      <figure class="reveal flex flex-col rounded-2xl bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <span class="font-display text-6xl leading-none text-sand" aria-hidden="true">&ldquo;</span>
+        <blockquote class="-mt-2 flex-1 leading-relaxed text-ink">Every project begins with understanding your space, style and everyday needs.</blockquote>
+        <figcaption class="mt-6 border-t border-beige pt-4"><p class="font-semibold">Our Approach</p><p class="text-sm text-ink">Made to measure</p></figcaption>
+      </figure>
+      <figure class="reveal reveal-d1 flex flex-col rounded-2xl bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <span class="font-display text-6xl leading-none text-sand" aria-hidden="true">&ldquo;</span>
+        <blockquote class="-mt-2 flex-1 leading-relaxed text-ink">From material selection to the final finish, each detail is planned with care.</blockquote>
+        <figcaption class="mt-6 border-t border-beige pt-4"><p class="font-semibold">Our Promise</p><p class="text-sm text-ink">Quality materials</p></figcaption>
+      </figure>
+      <figure class="reveal reveal-d2 flex flex-col rounded-2xl bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <span class="font-display text-6xl leading-none text-sand" aria-hidden="true">&ldquo;</span>
+        <blockquote class="-mt-2 flex-1 leading-relaxed text-ink">Our aim is furniture that feels right in your space and lasts for years.</blockquote>
+        <figcaption class="mt-6 border-t border-beige pt-4"><p class="font-semibold">Our Focus</p><p class="text-sm text-ink">Lasting craftsmanship</p></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section-y bg-cream">
+  <div class="container-x">
+    <div class="reveal mx-auto mb-8 max-w-2xl text-center">
+      <p class="eyebrow">Contact Us</p>
+      <h2 class="heading">Get a quote</h2>
+      <p class="mt-3 leading-relaxed text-ink">Tell us about your project and we will get back to you with the next steps.</p>
+    </div>
+
+    <div class="grid items-stretch gap-6 lg:grid-cols-5">
+      <div class="reveal lg:col-span-3">
+        <!-- Inquiry goes to WhatsApp (data-whatsapp) and to email (data-email-endpoint). -->
+        <form id="quote-form" novalidate data-whatsapp="919764699483" data-email-endpoint="https://formsubmit.co/ajax/nikitazaware77@gmail.com" class="grid h-full content-start gap-x-4 gap-y-3 rounded-2xl bg-white p-5 shadow-sm sm:grid-cols-2 sm:p-6">
+          <div>
+            <label for="name" class="mb-1 block text-xs font-medium">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" class="field">
+            <p class="field-error mt-1 hidden text-xs text-red-700" role="alert"></p>
+          </div>
+          <div>
+            <label for="company" class="mb-1 block text-xs font-medium">Company Name <span class="font-normal text-ink">(optional)</span></label>
+            <input id="company" name="company" type="text" autocomplete="organization" class="field">
+          </div>
+          <div>
+            <label for="email" class="mb-1 block text-xs font-medium">Email Address</label>
+            <input id="email" name="email" type="email" autocomplete="email" class="field">
+            <p class="field-error mt-1 hidden text-xs text-red-700" role="alert"></p>
+          </div>
+          <div>
+            <label for="phone" class="mb-1 block text-xs font-medium">Phone Number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" class="field">
+            <p class="field-error mt-1 hidden text-xs text-red-700" role="alert"></p>
+          </div>
+          <div>
+            <label for="type" class="mb-1 block text-xs font-medium">Furniture / Project Type</label>
+            <select id="type" name="type" class="field">
+              <option value="">Select a type</option>
+              <option>Residential Furniture</option>
+              <option>Office Furniture</option>
+              <option>Commercial / Hospitality</option>
+              <option>Custom Furniture</option>
+              <option>Wooden Furniture</option>
+              <option>Modular Furniture</option>
+              <option>Bulk Production</option>
+              <option>Other</option>
+            </select>
+            <p class="field-error mt-1 hidden text-xs text-red-700" role="alert"></p>
+          </div>
+          <div>
+            <label for="budget" class="mb-1 block text-xs font-medium">Estimated Budget <span class="font-normal text-ink">(optional)</span></label>
+            <select id="budget" name="budget" class="field">
+              <option value="">Select a range</option>
+              <option>Prefer not to say</option>
+              <option>Under ₹50,000</option>
+              <option>₹50,000 – ₹2,00,000</option>
+              <option>Above ₹2,00,000</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message" class="mb-1 block text-xs font-medium">Project Requirements</label>
+            <textarea id="message" name="message" rows="3" class="field resize-none"></textarea>
+            <p class="field-error mt-1 hidden text-xs text-red-700" role="alert"></p>
+          </div>
+          <div class="sm:col-span-2">
+            <button id="submit-btn" type="submit" class="btn btn-primary min-h-11 w-full px-8 disabled:opacity-60">Submit Inquiry</button>
+            <p class="mt-2 text-center text-xs text-ink">Your inquiry opens in WhatsApp and is also sent to us by email.</p>
+            <p id="form-status" aria-live="polite" class="mt-3 hidden rounded-lg p-3 text-sm"></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="reveal reveal-d1 flex flex-col gap-3 lg:col-span-2">
+        <a href="mailto:nikitazaware77@gmail.com" class="contact-card group">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg></span>
+          <span class="min-w-0"><span class="block text-[11px] font-semibold uppercase tracking-[0.2em] text-ink">Email</span><span class="mt-0.5 block break-words text-sm font-medium">nikitazaware77@gmail.com</span></span>
+        </a>
+        <a href="tel:+919764699483" class="contact-card group">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span class="min-w-0"><span class="block text-[11px] font-semibold uppercase tracking-[0.2em] text-ink">Phone</span><span class="mt-0.5 block text-sm font-medium">9764699483</span></span>
+        </a>
+        <div class="contact-card group">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v5l3 2"/></svg></span>
+          <span class="min-w-0"><span class="block text-[11px] font-semibold uppercase tracking-[0.2em] text-ink">Business Hours</span><span class="mt-0.5 block text-sm font-medium">Monday – Saturday: 9:00 AM – 6:00 PM</span></span>
+        </div>
+        <div class="map-frame relative min-h-[170px] flex-1 overflow-hidden rounded-xl border border-sand bg-beige">
+          <iframe title="Google Maps showing Baner, Pune" src="https://maps.google.com/maps?q=Baner%2C%20Pune%2C%20Maharashtra&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" class="absolute inset-0 border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-charcoal text-white/80">
+  <div class="container-x grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <a href="#home" class="flex items-center gap-3" aria-label="Stellar Woodworks home">
+        <span class="flex h-10 w-10 items-center justify-center rounded-md bg-white/10 font-display text-2xl font-bold text-white">F</span>
+        <span class="leading-tight"><span class="block font-display text-xl font-semibold text-white">Stellar Woodworks</span><span class="block text-[10px] uppercase tracking-[0.25em] text-white/60">Furniture Manufacturing</span></span>
+      </a>
+      <p class="mt-5 text-sm leading-relaxed text-white/60">Thoughtfully designed furniture, crafted with care for homes, offices and commercial spaces.</p>
+      <div class="mt-5 flex gap-3">
+        <a href="#" aria-label="Facebook" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white hover:text-charcoal"><svg viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a>
+        <a href="#" aria-label="Instagram" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white hover:text-charcoal"><svg viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zM12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM17.5 6.5h.01"/></svg></a>
+        <a href="#" aria-label="LinkedIn" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white hover:text-charcoal"><svg viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4v11H4zM6 4a2 2 0 1 0 0 .01M10 9h4v2c1-2 6-3 6 2v7h-4v-6c0-2-3-2-3 0v6h-3z"/></svg></a>
+        <a href="#" aria-label="YouTube" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white hover:text-charcoal"><svg viewBox="0 0 24 24" class="h-5 w-5 fill-none stroke-current stroke-[1.6]" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zM10 9l5 3-5 3z"/></svg></a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="mb-4 font-display text-xl font-semibold text-white">Quick Links</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a class="hover:text-white" href="#home">Home</a></li>
+        <li><a class="hover:text-white" href="#about">About Us</a></li>
+        <li><a class="hover:text-white" href="#services">Our Services</a></li>
+        <li><a class="hover:text-white" href="#works">Our Works</a></li>
+        <li><a class="hover:text-white" href="#featured">Featured Projects</a></li>
+        <li><a class="hover:text-white" href="#products">Products</a></li>
+        <li><a class="hover:text-white" href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="mb-4 font-display text-xl font-semibold text-white">Services</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a class="hover:text-white" href="#services">Custom Furniture Manufacturing</a></li>
+        <li><a class="hover:text-white" href="#services">Residential Furniture</a></li>
+        <li><a class="hover:text-white" href="#services">Commercial Furniture</a></li>
+        <li><a class="hover:text-white" href="#services">Office Furniture</a></li>
+        <li><a class="hover:text-white" href="#services">Modular Furniture</a></li>
+        <li><a class="hover:text-white" href="#services">Bulk Furniture Production</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="mb-4 font-display text-xl font-semibold text-white">Contact</h3>
+      <ul class="space-y-2 text-sm">
+        <li>Baner, Pune, Maharashtra 411045, India</li>
+        <li>Phone: <a href="tel:+919764699483" class="hover:text-white">9764699483</a></li>
+        <li class="break-words"><a href="mailto:nikitazaware77@gmail.com" class="hover:text-white">nikitazaware77@gmail.com</a></li>
+        <li>Monday – Saturday: 9:00 AM – 6:00 PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-white/50">
+    &copy; <span id="year">2026</span> Stellar Woodworks. All rights reserved.
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="to-top" type="button" aria-label="Back to top" class="fixed bottom-5 right-5 z-40 hidden h-12 w-12 items-center justify-center rounded-full bg-accent text-xl text-white shadow-lg transition-colors hover:bg-accent-dark">&uarr;</button>
+
+<!-- Project detail modal -->
+<div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="pm-title">
+  <div class="relative max-h-full w-full max-w-5xl overflow-y-auto rounded-xl bg-warm">
+    <button type="button" data-close class="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-xl shadow hover:bg-white" aria-label="Close">&times;</button>
+    <div class="grid md:grid-cols-5">
+      <div class="aspect-[4/3] md:col-span-3 md:aspect-auto md:min-h-[460px]"><img id="pm-img" src="" alt="" class="img-cover"></div>
+      <div class="flex flex-col justify-center p-6 sm:p-8 md:col-span-2">
+        <p id="pm-cat" class="text-xs font-semibold uppercase tracking-[0.25em] text-accent"></p>
+        <h3 id="pm-title" class="mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl"></h3>
+        <p id="pm-loc" class="mt-2 hidden text-sm text-ink"></p>
+        <p id="pm-text" class="mt-5 leading-relaxed text-ink"></p>
+        <p class="mt-4 text-xs text-ink/70">Sample project details. Replace with the real scope, materials and timeline.</p>
+        <a href="#contact" data-close class="btn btn-primary mt-7 self-start">Request a Similar Project</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery lightbox -->
+<div id="lightbox" class="modal" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button type="button" data-close class="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-xl shadow hover:bg-white" aria-label="Close">&times;</button>
+  <button type="button" id="lb-prev" class="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl hover:bg-white" aria-label="Previous image">&larr;</button>
+  <button type="button" id="lb-next" class="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl hover:bg-white" aria-label="Next image">&rarr;</button>
+  <figure class="flex max-h-full max-w-5xl flex-col items-center">
+    <img id="lb-img" src="" alt="" class="max-h-[80vh] w-auto max-w-full rounded-lg object-contain">
+    <figcaption id="lb-cap" class="mt-3 text-center text-sm text-white/80"></figcaption>
+  </figure>
+</div>
+
+</body>
+</html>
