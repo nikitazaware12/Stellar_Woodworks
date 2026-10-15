@@ -192,6 +192,10 @@
     if (e.key === 'ArrowLeft') showImage(gIndex - 1);
   });
 
+  /* ---------- date pickers: no past dates + readable format ---------- */
+  function fmtDate(v) { return /^\d{4}-\d{2}-\d{2}$/.test(v || '') ? new Date(v + 'T00:00:00').toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : ''; }
+  Array.prototype.forEach.call(document.querySelectorAll('input[data-min-today]'), function (i) { var t = new Date(); t.setMinutes(t.getMinutes() - t.getTimezoneOffset()); i.min = t.toISOString().slice(0, 10); });
+
   /* ---------- Quote form: validation + optional submission ---------- */
   var form = $('#quote-form');
   var statusEl = $('#form-status');
@@ -248,6 +252,7 @@
       'Phone: ' + d.phone,
       'Project type: ' + d.type,
       d.budget ? 'Budget: ' + d.budget : '',
+      d.date ? 'Preferred date: ' + fmtDate(d.date) : '',
       '',
       'Requirements: ' + d.message
     ];
@@ -285,6 +290,7 @@
         Phone: data.phone,
         'Project type': data.type,
         Budget: data.budget || '-',
+        'Preferred date': fmtDate(data.date) || '-',
         Requirements: data.message
       };
       emailPromise = fetch(endpoint, {
